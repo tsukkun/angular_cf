@@ -1,0 +1,114 @@
+﻿BODY { font-size: medium }  /* 標準 */
+.xs { font-size: xx-small } /* 小2 */
+.xm { font-size: x-small }  /* 小1 */
+.sm { font-size: small }    /* 小 */
+.md { font-size: medium }   /* 標準 */
+.la { font-size: large }    /* 大 */
+.xr { font-size: x-large }  /* 大1 */
+.xl { font-size: xx-large } /* 大2 */
+.sr { font-size: smaller }  /* 一段階小さい */
+.lr { font-size: larger }   /* 一段階大きい */
+.pt { font-size: 10pt }     /* 10pt */
+.px { font-size: 20px }     /* 20px */
+.pe { font-size: 200% }     /* 200% */
+
+/* ------------------------------------------------------
+   clearfix
+ ------------------------------------------------------ */
+.clear:after { content: "."; display:block; height: 0; clear: both; visibility: hidden;}
+.clear { display: inline-table; min-height: 1%;}
+/* Hides from IE-mac \*/
+* html .clear { height:1%;}
+.clear { display: block;}
+
+
+ #sclTbl { /* スクロール対象のテーブル */
+  background-color: #fff; /* テーブルの背景色 borderの色になる */
+  border-collapse:separate; /* 枠線の表示の仕方 */
+  font-size: 16px;/* 文字のサイズ */
+   }
+
+#out_Div { /* 全体の枠。ここにヘッダを格納 */
+  position: relative; /* 相対位置 */
+  padding-top: 30px;  /*  #in_Div の開始位置 */
+  width: 1004px; /* 列幅の合計＋セル間の幅(2px)の合計＋20px 程度 */
+  border: 1px solid #0099cc;  /* 外枠 */
+  background-color: #fff; /* 白 */
+   }
+
+#in_Div {/* tbodyが入っている。ここがスクロール対象*/
+  overflow: auto; /* スクロールバー*/
+  height: 243px; /* tbodyを表示する高さ */
+    }
+
+#sclTbl thead tr {/* ヘッダ 見出し行,位置を #out_Div の左上端に移動 */
+  position: absolute; /* 絶対位置 */
+  top: 0px; /* 上からの位置 */
+  left: 0px; /* 左からの位置 */
+  background-color: #fff;
+   }
+
+#sclTbl thead tr th{/* thead 'th'のスタイル */
+  background-color: #0099cc;  /* 背景色 */
+  color: #fff; /* 文字色 */
+  padding: 3px 0px;
+   }
+
+#sclTbl tbody tr td{/* tbody 'td'のスタイル */
+  background-color: #dcdcdd;
+  color: blue;
+  padding: 3px 4px;
+   }
+
+.coL0 { width: 30px; }/* colgroupの列幅指定 */
+.coL1 { width: 100px; }
+.coL2 { width: 120px; }
+.coL3 { width: 140px; }
+.coL4 { width: 160px; }
+.coL5 { width: 180px; }
+.coL6 { width: 200px; }
+.coL7 { width: 220px; }
+.coL8 { width: 240px; }
+.coL9 { width: 260px; }
+.coLL { width: 400px; }
+
+div.col-md-6.mgb {padding : 2px 2px;}
+
+.css-form input.ng-invalid.ng-dirty {
+  /*background-color: #FA787E;*/
+  background-color: #FEB2DA;
+}
+ 
+.css-form input.ng-valid.ng-dirty {
+  background-color: #BEFFBD;
+}
+
+.css-form input.ng-valid.ng-dirty.invalidcolor {
+  background-color: #FEB2DA;
+}
+
+.selwidth{
+  max-width:245px;
+  width:60%;
+}
+
+.inpwidth{
+  max-width:135px;
+  /*width:60%;*/
+}
+
+.inpnowidth{
+  max-width:30px;
+  text-align: center;
+  /*width:60%;*/
+}
+
+.selectpad{
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.spacer{
+  margin-bottom: 4px;
+  margin-top: 4px;
+}

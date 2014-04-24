@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="sampleSearchApp">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS + CFC サンプル画面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.95">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+
+    <script src="js/angular.js"></script>
+    <script src="js/blog_angular.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <div id="header"　class="row">
+      <center><h3>AngularJS + CFC サンプル画面</h3></center>
+  </div>
+
+  <!-- 検索結果一覧を表示するエリア -->
+  <div class="table-responsive" ng-controller="SearchResultCtrl">
+    <div class="row">
+        <div class="col-sm-3">
+          <br />
+            該当件数は <strong>{{emps.length}}</strong> 件
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1 col-sm-offset-10">
+            <button type="submit" class="btn btn-info" ng-click="$emit('GoSearch')">検索実行</button>
+        </div>
+    </div>
+    <table class="table table-hover table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>No</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Salary</th>
+        <th>Contract</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="emp in filteredEmps">
+        <th>{{$index+1}}</th>
+        <th>{{emp.firstname}}</th>
+        <th>{{emp.lastname}}</th>
+        <th>{{emp.salary}}</th>
+        <th>{{emp.contract}}</th>
+      </tr>
+  　　</tbody>
+    </table>
+    <pagination page="currentPage" items-per-page="perpage" total-items="totalItems"></pagination>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
